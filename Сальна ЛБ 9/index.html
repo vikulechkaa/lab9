@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>lab9</title>
+    <meta name="description">
+    <meta name="keywords">
+    <link rel="stylesheet" href="style1.css">
+
+    <style>
+        body {
+            font-family: Times New Roman, sans-serif;
+            font-size: 14pt;
+            background-color: #c7f31625;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            background-color: #019B8B;
+            color: #fff;
+            padding: 10px;
+        }
+        h2 {
+            text-align: center;
+            background-color: #019B8B;
+            color: #fff;
+            padding: 10px;
+        }
+        p {
+            text-align: justify;
+            line-height: 1.5;
+            margin-bottom: 10px;
+            color:#085f2c
+        }
+        h3 {
+            text-align: center;
+            background-color: #019B8B;
+            color:#fff;
+            padding: 10px
+        }
+        .icons {
+            margin-top: 10px;
+        }
+        .icons a {
+            margin-right: 10px;
+        }
+        .icons img {
+            width: 30px;
+            height: 30px;
+        }
+        table {
+            margin-left: auto;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #333;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #3d01addd;
+            color: #fff;
+        }
+
+        header {
+            background-color: #4169E1;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .header-logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .header-nav {
+            margin-top: 20px;
+        }
+
+        .header-nav a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 20px;
+        }
+
+        .header-nav a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background-color: #4169E1;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .footer-nav a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 20px;
+        }
+
+        .footer-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-info {
+            margin-top: 10px;
+        }
+        main {
+            margin: 2% 5%;
+            position: relative;
+            min-height: 100%;
+            padding-bottom: 150px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1rem;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-logo">Мій сайт</div>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li class="dropdown">
+                    <a href="Poltava.html">Моє рідне місто</a>
+                    <div class="dropdown-content">
+                        <a href="Poltava.html#vuzi">Вузи Полтавщини</a>
+                    </div>
+                </li>
+                <li><a href="Register1.html">Реєстрація</a></li>
+                <li><a href="#food">Мої улюблені страви</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <table>
+          <div class="login-form">
+            <form action="#" method="post">
+                <input type="text" name="login" placeholder="Логін">
+                <input type="password" name="password" placeholder="Пароль">
+                <input type="submit" value="Увійти">
+                <input type="button" value="Зареєструватися" class="register-btn" onclick="window.location.href='Register1.html';">
+            </form>
+        </div>
+    </table>
+    
+    <h1>Про себе</h1>
+    <p>Мене звати Вікторія, я народилася 25 вересня 2005 року у місті Полтава. Зараз я навчаюсь на <b>третьому</b> курсі
+        <b>Полтавської політехніки імені Юрія Кондратюка</b>, на спеціальності <b>"Комп'ютерні науки"</b> (122).Завжди цікавлюся новими технологіями та вивчаю їх з великим захопленням.
+    </p>
+    
+    <p>Я завжди в пошуку можливостей для вдосконалення своїх навичок та взаємодії зі спільнотою. Завдяки цьому, я не тільки
+        розвиваю власні здібності, але і створюю цікаві проекти, спрямовані на вирішення реальних завдань і проблем.</p>
+    
+    
+    <h1>Моє хобі</h1>
+    <p>Моє хобі - це вивчення програмування та автомобілі. </p>
+    
+    <p>Вільний час я проводжу за комп'ютером, розвиваючи свої навички в програмуванні та розробці телеграм-ботів. </p>
+	
+    <h2>Програмування</h2>
+    <p>Ось невелика программа на мові C++ створена власноруч:
+    
+       <br>#include <"Windows.h">
+                <br>#include <"iostream">
+                    <br>using namespace std;
+                    <br>
+                    <br>int main() {
+                    <br>SetConsoleCP(1251);
+                    <br>SetConsoleOutputCP(1251);
+                    <br>
+                    <br>def hello():
+                    <br>print("Привіт, світ!");
+                        <br>hello();
+    </p>
+    
+    <h2>Дисципліни, які вивчаються цього семестру</h2>
+    <ol>
+        <li>Об'єктно-орієнтоване програмування</li>
+        <li>Теорія алгоритмів</li>
+        <li>Комп'ютерні мережі</li>
+        <li>Фізичне виховання</li>
+        <li>Веб дизайн та веб програмування</li>
+    </ol>
+    <h2>Мої улюблені страви</h2>
+    <ul><a name="food"></a>
+        <li>Окрошка</li>
+        <li>Суші</li>
+        <li>Зелений борщ</li>
+    </ul>
+    
+    <h3>Контактна інформація</h3>
+    <p style="text-align: center;">
+        <font color="mediumblue">Номер телефону:</font> +380991205158
+    </p>
+    <p style="text-align: center;">
+        <font color="mediumblue">Email:</font> <a href="salnaiaviktoria171@gmail.com">salnaiaviktoria171@gmail.com</a>
+    </p>
+    
+    
+    <h3>Соціальні мережі</h3>
+    <div class="icons">
+        <ul style="text-align: center;">
+            <a href="https://www.instagram.com/__vikule4ka___?igsh=MWR3cGN5ZjA0MTUxNg==" target="_blank">
+                <img src="1.png" alt="Instagram" class="social-icon">
+           
+        </ul>
+    </div>
+	
+    <p style="text-align: right;">
+        <font color="mediumblue"><i><u>Студентка групи 303-ТН Сальна В.О.</u></i></font>
+    </p>
+    <p><a href="#top">На початок сторінки</a></p>
+    <footer>
+    
+        <div class="footer-info">
+            &copy; 2024 Сайт створив Сальна Вікторія. Всі права захищені.
+        </div>
+    </footer>
+</body>
+</html>

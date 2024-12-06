@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реєстрація</title>
+    <style>
+        #success-message {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 9999;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #555;
+        }
+        form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        th:first-child, td:first-child {
+            width: 20%;
+            text-align: right;
+            font-weight: bold;
+        }
+        th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+        input[type="text"],
+        input[type="date"],
+        input[type="tel"],
+        input[type="email"],
+        select,
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .button-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .button-container button {
+            margin-right: 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .button-container button:hover {
+            background-color: #0056b3;
+        }
+        .button-container button[type="reset"] {
+            background-color: #6c757d;
+        }
+        .button-container button[type="reset"]:hover {
+            background-color: #495057;
+        }
+        .button-container button[type="reset"],
+        .button-container button[type="submit"],
+        .button-container button[type="button"] {
+            transition: background-color 0.3s ease;
+        }
+        .footer {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Реєстрація</h1>
+            <form id="registration-form" action="index.html" method="post">
+                <table>
+                    <tr>
+                        <th>Номер поля</th>
+                        <th>Поле</th>
+                        <th>Введіть дані</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Прізвище</td>
+                        <td><input type="text" name="surname" placeholder="Введіть ваше прізвище"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Ім'я, по батькові</td>
+                        <td><input type="text" name="fullname" placeholder="Введіть ваше ім'я та по батькові"></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Дата, рік народження</td>
+                        <td><input type="date" name="birthdate"></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Домашня адреса</td>
+                        <td><input type="text" name="address" placeholder="Введіть вашу домашню адресу"></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Місто роботи</td>
+                        <td><input type="text" name="workcity" placeholder="Введіть місто вашої роботи"></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Телефон</td>
+                        <td><input type="tel" name="phone" placeholder="Введіть ваш номер телефону"></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Е-mail</td>
+                        <td><input type="email" name="email" placeholder="Введіть ваш email"></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Введіть ваш логін</td>
+                        <td><input type="text" name="login" placeholder="Введіть ваш логін"></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Введіть ваш пароль</td>
+                        <td><input type="password" name="password" placeholder="Введіть ваш пароль"></td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Стать</td>
+                        <td>
+                            <select name="gender">
+                                <option value="male">Чоловіча</option>
+                                <option value="female">Жіноча</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+
+                <div class="button-container">
+                    <button type="reset">Очистити</button>
+                    <button type="submit">Реєструвати</button>
+                    <button type="button" onclick="window.location.href='index.html'">Повернутися на головну</button>
+                </div>
+            </form>
+            <div id="success-message">
+                <p>Ви успішно зареєстровані!</p>
+                <p>Через декілька секунд ви будете перенаправлені на головну сторінку.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Всі права захищені.</p>
+    </footer>
+
+    <script>
+        document.getElementById('registration-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Відміна стандартної дії відправки форми
+
+            // Ваш код обробки форми тут
+
+            // Відображення повідомлення про успішну реєстрацію
+            document.getElementById('success-message').style.display = 'block';
+
+            // Очищення полів форми
+            document.getElementById('registration-form').reset();
+
+            // Перехід на головну сторінку через 3 секунди
+            setTimeout(function() {
+                window.location.href = 'index.html';
+            }, 3000); // Затримка в мілісекундах
+        });
+
+        // Перехід на головну сторінку при натисканні на кнопку "Повернутися на головну"
+        document.getElementById('return-home-button').addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
